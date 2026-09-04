@@ -1,6 +1,6 @@
 <h1> Aula 1 </h1>
 
-[Clique aqui para abrir a Calculadora](Algoritmos%20e%20pensamentos%20computacionais/calculadora.20operaçoes.fprg)
+[Clique aqui para abrir a Calculadora](/calculadora.20operaçoes.fprg)
 
 🧮 Calculadora — Flowgorithm
 
