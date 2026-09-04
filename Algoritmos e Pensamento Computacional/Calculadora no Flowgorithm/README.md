@@ -1,6 +1,6 @@
 <h1> Aula 1 </h1>
 
-[Clique aqui para abrir a Calculadora](/calculadora.20operaçoes.fprg)
+[Clique aqui para abrir a Calculadora](calculadora.20operaçoes.fprg)
 
 🧮 Calculadora — Flowgorithm
 
