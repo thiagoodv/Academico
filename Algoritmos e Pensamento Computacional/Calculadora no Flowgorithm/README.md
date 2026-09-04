@@ -5,7 +5,7 @@
 
 ## 👨‍🎓 Nome do aluno: Thiago Oiveira
 
-## 🎯 Objetivo do programa
+## 🎯 Objetivo do Programa
 
 O objetivo deste programa é criar uma calculadora usando o Flowgorithm,
 colocando em prática os conhecimentos de lógica de programação
