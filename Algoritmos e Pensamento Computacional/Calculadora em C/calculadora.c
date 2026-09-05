@@ -2,347 +2,436 @@
 #include <string.h>
 #include <math.h>
 
+#define PI 3.14159265358979323846
+
+// 1. Soma
+double somar(double a, double b) {
+    return a + b;
+}
+
+// 2. Subtracao
+double subtrair(double a, double b) {
+    return a - b;
+}
+
+// 3. Multiplicacao
+double multiplicar(double a, double b) {
+    return a * b;
+}
+
+// 4. Divisao
+double dividir(double a, double b) {
+    return a / b;
+}
+
+// 5. Potencia
+double potencia(double a, double b) {
+    return pow(a, b);
+}
+
+// 6. Raiz quadrada
+double raizQuadrada(double a) {
+    return sqrt(a);
+}
+
+// 7. Raiz cubica
+double raizCubica(double a) {
+    return cbrt(a);
+}
+
+// 8. Seno
+double seno(double a) {
+    return sin(a * PI / 180);
+}
+
+// 9. Cosseno
+double cosseno(double a) {
+    return cos(a * PI / 180);
+}
+
+// 10. Tangente
+double tangente(double a) {
+    return tan(a * PI / 180);
+}
+
+// 11. Logaritmo natural
+double logNatural(double a) {
+    return log(a);
+}
+
+// 12. Logaritmo base 10
+double logBase10(double a) {
+    return log10(a);
+}
+
+// 13. Valor absoluto
+double valorAbsoluto(double a) {
+    return fabs(a);
+}
+
+// 14. Porcentagem
+double porcentagem(double a, double b) {
+    return (a * b) / 100;
+}
+
+// 15. Media aritmetica
+double media(double a, double b) {
+    return (a + b) / 2;
+}
+
+// 16. Graus para radianos
+double grausParaRadianos(double a) {
+    return a * PI / 180;
+}
+
+// 17. Radianos para graus
+double radianosParaGraus(double a) {
+    return a * 180 / PI;
+}
+
+// 18. Area do circulo
+double areaCirculo(double raio) {
+    return PI * raio * raio;
+}
+
+// 19. Area do retangulo
+double areaRetangulo(double base, double altura) {
+    return base * altura;
+}
+
+// 20. Hipotenusa
+double hipotenusa(double a, double b) {
+    return sqrt(a * a + b * b);
+}
+
+
 int main() {
+
     char operacao[20];
     double a, b, c;
-    double peso, altura;
-    double base, lado, raio;
-    char figura[20];
 
-    printf("Escolha uma das 20 operacoes:\n");
-    printf("+  -  *  /  %%  ^  >  <  >=  <=  ==  !=\n");
-    printf("media  max  min  dist  somaquad  mediaquad  imc  area\n");
+    do {
 
-    scanf("%19s", operacao);
+        printf("\nEscolha uma das 20 operacoes:\n");
+        printf("+  -  *  /  ^\n");
+        printf("raizq raizc  seno  cosseno  tangente\n");
+        printf("ln  log  abs  porcentagem  media\n");
+        printf("grausrad  radgraus  circulo  retangulo  hipotenusa\n");
+        printf("Digite sair para encerrar.\n");
 
-    /*
-       Operacoes que utilizam a e b
-    */
-    if (strcmp(operacao, "+") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
+        printf("\nDigite a operacao: ");
+        scanf("%19s", operacao);
 
-        printf("Digite b: ");
-        scanf("%lf", &b);
 
-        c = a + b;
-        printf("Resultado: %.2lf\n", c);
+        // SOMA
+        if (strcmp(operacao, "+") == 0) {
 
-    } else if (strcmp(operacao, "-") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
+            printf("Digite a: ");
+            scanf("%lf", &a);
 
-        printf("Digite b: ");
-        scanf("%lf", &b);
+            printf("Digite b: ");
+            scanf("%lf", &b);
 
-        c = a - b;
-        printf("Resultado: %.2lf\n", c);
+            c = somar(a, b);
 
-    } else if (strcmp(operacao, "*") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
-
-        printf("Digite b: ");
-        scanf("%lf", &b);
-
-        c = a * b;
-        printf("Resultado: %.2lf\n", c);
-
-    } else if (strcmp(operacao, "/") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
-
-        printf("Digite b: ");
-        scanf("%lf", &b);
-
-        if (b != 0) {
-            c = a / b;
             printf("Resultado: %.2lf\n", c);
-        } else {
-            printf("Erro: divisao por zero.\n");
-        }
 
-    } else if (strcmp(operacao, "%") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
 
-        printf("Digite b: ");
-        scanf("%lf", &b);
+        // SUBTRACAO
+        } else if (strcmp(operacao, "-") == 0) {
 
-        if (b != 0) {
-            c = fmod(a, b);
+            printf("Digite a: ");
+            scanf("%lf", &a);
+
+            printf("Digite b: ");
+            scanf("%lf", &b);
+
+            c = subtrair(a, b);
+
             printf("Resultado: %.2lf\n", c);
-        } else {
-            printf("Erro: modulo por zero.\n");
-        }
 
-    } else if (strcmp(operacao, "^") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
 
-        printf("Digite b: ");
-        scanf("%lf", &b);
+        // MULTIPLICACAO
+        } else if (strcmp(operacao, "*") == 0) {
 
-        c = pow(a, b);
-        printf("Resultado: %.2lf\n", c);
+            printf("Digite a: ");
+            scanf("%lf", &a);
 
-    } else if (strcmp(operacao, ">") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
+            printf("Digite b: ");
+            scanf("%lf", &b);
 
-        printf("Digite b: ");
-        scanf("%lf", &b);
+            c = multiplicar(a, b);
 
-        if (a > b) {
-            printf("Resultado: a e maior\n");
-        } else {
-            printf("Resultado: b e maior ou igual\n");
-        }
+            printf("Resultado: %.2lf\n", c);
 
-    } else if (strcmp(operacao, "<") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
 
-        printf("Digite b: ");
-        scanf("%lf", &b);
+        // DIVISAO
+        } else if (strcmp(operacao, "/") == 0) {
 
-        if (a < b) {
-            printf("Resultado: a e menor\n");
-        } else {
-            printf("Resultado: b e menor ou igual\n");
-        }
+            printf("Digite a: ");
+            scanf("%lf", &a);
 
-    } else if (strcmp(operacao, ">=") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
+            printf("Digite b: ");
+            scanf("%lf", &b);
 
-        printf("Digite b: ");
-        scanf("%lf", &b);
+            if (b != 0) {
 
-        if (a >= b) {
-            printf("Resultado: a e maior ou igual a b\n");
-        } else {
-            printf("Resultado: a e menor que b\n");
-        }
+                c = dividir(a, b);
 
-    } else if (strcmp(operacao, "<=") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
+                printf("Resultado: %.2lf\n", c);
 
-        printf("Digite b: ");
-        scanf("%lf", &b);
-
-        if (a <= b) {
-            printf("Resultado: a e menor ou igual a b\n");
-        } else {
-            printf("Resultado: a e maior que b\n");
-        }
-
-    } else if (strcmp(operacao, "==") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
-
-        printf("Digite b: ");
-        scanf("%lf", &b);
-
-        if (a == b) {
-            printf("Resultado: a e igual a b\n");
-        } else {
-            printf("Resultado: a e diferente de b\n");
-        }
-
-    } else if (strcmp(operacao, "!=") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
-
-        printf("Digite b: ");
-        scanf("%lf", &b);
-
-        if (a != b) {
-            printf("Resultado: a e diferente de b\n");
-        } else {
-            printf("Resultado: a e igual a b\n");
-        }
-
-    } else if (strcmp(operacao, "media") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
-
-        printf("Digite b: ");
-        scanf("%lf", &b);
-
-        c = (a + b) / 2;
-        printf("Media: %.2lf\n", c);
-
-    } else if (strcmp(operacao, "max") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
-
-        printf("Digite b: ");
-        scanf("%lf", &b);
-
-        if (a > b) {
-            c = a;
-        } else {
-            c = b;
-        }
-
-        printf("Maior valor: %.2lf\n", c);
-
-    } else if (strcmp(operacao, "min") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
-
-        printf("Digite b: ");
-        scanf("%lf", &b);
-
-        if (a < b) {
-            c = a;
-        } else {
-            c = b;
-        }
-
-        printf("Menor valor: %.2lf\n", c);
-
-    } else if (strcmp(operacao, "dist") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
-
-        printf("Digite b: ");
-        scanf("%lf", &b);
-
-        if (a >= b) {
-            c = a - b;
-        } else {
-            c = b - a;
-        }
-
-        printf("Distancia absoluta: %.2lf\n", c);
-
-    } else if (strcmp(operacao, "somaquad") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
-
-        printf("Digite b: ");
-        scanf("%lf", &b);
-
-        c = a * a + b * b;
-        printf("Soma dos quadrados: %.2lf\n", c);
-
-    } else if (strcmp(operacao, "mediaquad") == 0) {
-        printf("Digite a: ");
-        scanf("%lf", &a);
-
-        printf("Digite b: ");
-        scanf("%lf", &b);
-
-        c = (a * a + b * b) / 2;
-        printf("Media dos quadrados: %.2lf\n", c);
-
-    /*
-       NOVA OPERACAO: IMC
-    */
-    } else if (strcmp(operacao, "imc") == 0) {
-
-        printf("Digite o peso em kg: ");
-        scanf("%lf", &peso);
-
-        printf("Digite a altura em metros: ");
-        scanf("%lf", &altura);
-
-        if (altura > 0) {
-            c = peso / (altura * altura);
-
-            printf("IMC: %.2lf\n", c);
-
-            if (c < 18.5) {
-                printf("Classificacao: abaixo do peso\n");
-            } else if (c < 25) {
-                printf("Classificacao: peso normal\n");
-            } else if (c < 30) {
-                printf("Classificacao: sobrepeso\n");
             } else {
-                printf("Classificacao: obesidade\n");
+
+                printf("Erro: divisao por zero.\n");
             }
 
-        } else {
-            printf("Erro: altura invalida.\n");
-        }
 
-    /*
-       NOVA OPERACAO: AREA
-    */
-    } else if (strcmp(operacao, "area") == 0) {
+        // POTENCIA
+        } else if (strcmp(operacao, "^") == 0) {
 
-        printf("Escolha a figura geometrica:\n");
-        printf("circulo\n");
-        printf("quadrado\n");
-        printf("retangulo\n");
-        printf("triangulo\n");
+            printf("Digite a: ");
+            scanf("%lf", &a);
 
-        scanf("%19s", figura);
+            printf("Digite b: ");
+            scanf("%lf", &b);
 
-        if (strcmp(figura, "circulo") == 0) {
+            c = potencia(a, b);
+
+            printf("Resultado: %.2lf\n", c);
+
+
+        // RAIZ QUADRADA
+        } else if (strcmp(operacao, "raizq") == 0) {
+
+            printf("Digite o numero: ");
+            scanf("%lf", &a);
+
+            if (a >= 0) {
+
+                c = raizQuadrada(a);
+
+                printf("Resultado: %.2lf\n", c);
+
+            } else {
+
+                printf("Erro: numero invalido.\n");
+            }
+
+
+        // RAIZ CUBICA
+        } else if (strcmp(operacao, "raizc") == 0) {
+
+            printf("Digite o numero: ");
+            scanf("%lf", &a);
+
+            c = raizCubica(a);
+
+            printf("Resultado: %.2lf\n", c);
+
+
+        // SENO
+        } else if (strcmp(operacao, "seno") == 0) {
+
+            printf("Digite o angulo em graus: ");
+            scanf("%lf", &a);
+
+            c = seno(a);
+
+            printf("Resultado: %.4lf\n", c);
+
+
+        // COSSENO
+        } else if (strcmp(operacao, "cosseno") == 0) {
+
+            printf("Digite o angulo em graus: ");
+            scanf("%lf", &a);
+
+            c = cosseno(a);
+
+            printf("Resultado: %.4lf\n", c);
+
+
+        // TANGENTE
+        } else if (strcmp(operacao, "tangente") == 0) {
+
+            printf("Digite o angulo em graus: ");
+            scanf("%lf", &a);
+
+            c = tangente(a);
+
+            printf("Resultado: %.4lf\n", c);
+
+
+        // LOGARITMO NATURAL
+        } else if (strcmp(operacao, "ln") == 0) {
+
+            printf("Digite o numero: ");
+            scanf("%lf", &a);
+
+            if (a > 0) {
+
+                c = logNatural(a);
+
+                printf("Resultado: %.4lf\n", c);
+
+            } else {
+
+                printf("Erro: numero invalido.\n");
+            }
+
+
+        // LOGARITMO BASE 10
+        } else if (strcmp(operacao, "log") == 0) {
+
+            printf("Digite o numero: ");
+            scanf("%lf", &a);
+
+            if (a > 0) {
+
+                c = logBase10(a);
+
+                printf("Resultado: %.4lf\n", c);
+
+            } else {
+
+                printf("Erro: numero invalido.\n");
+            }
+
+
+        // VALOR ABSOLUTO
+        } else if (strcmp(operacao, "abs") == 0) {
+
+            printf("Digite o numero: ");
+            scanf("%lf", &a);
+
+            c = valorAbsoluto(a);
+
+            printf("Resultado: %.2lf\n", c);
+
+
+        // PORCENTAGEM
+        } else if (strcmp(operacao, "porcentagem") == 0) {
+
+            printf("Digite a porcentagem: ");
+            scanf("%lf", &a);
+
+            printf("Digite o valor: ");
+            scanf("%lf", &b);
+
+            c = porcentagem(a, b);
+
+            printf("Resultado: %.2lf\n", c);
+
+
+        // MEDIA
+        } else if (strcmp(operacao, "media") == 0) {
+
+            printf("Digite a: ");
+            scanf("%lf", &a);
+
+            printf("Digite b: ");
+            scanf("%lf", &b);
+
+            c = media(a, b);
+
+            printf("Media: %.2lf\n", c);
+
+
+        // GRAUS PARA RADIANOS
+        } else if (strcmp(operacao, "grausrad") == 0) {
+
+            printf("Digite o valor em graus: ");
+            scanf("%lf", &a);
+
+            c = grausParaRadianos(a);
+
+            printf("Resultado: %.4lf\n", c);
+
+
+        // RADIANOS PARA GRAUS
+        } else if (strcmp(operacao, "radgraus") == 0) {
+
+            printf("Digite o valor em radianos: ");
+            scanf("%lf", &a);
+
+            c = radianosParaGraus(a);
+
+            printf("Resultado: %.4lf\n", c);
+
+
+        // AREA DO CIRCULO
+        } else if (strcmp(operacao, "circulo") == 0) {
 
             printf("Digite o raio: ");
-            scanf("%lf", &raio);
+            scanf("%lf", &a);
 
-            if (raio >= 0) {
-                c = M_PI * raio * raio;
+            if (a >= 0) {
+
+                c = areaCirculo(a);
+
                 printf("Area do circulo: %.2lf\n", c);
+
             } else {
+
                 printf("Erro: raio invalido.\n");
             }
 
-        } else if (strcmp(figura, "quadrado") == 0) {
 
-            printf("Digite o lado: ");
-            scanf("%lf", &lado);
-
-            if (lado >= 0) {
-                c = lado * lado;
-                printf("Area do quadrado: %.2lf\n", c);
-            } else {
-                printf("Erro: lado invalido.\n");
-            }
-
-        } else if (strcmp(figura, "retangulo") == 0) {
+        // AREA DO RETANGULO
+        } else if (strcmp(operacao, "retangulo") == 0) {
 
             printf("Digite a base: ");
-            scanf("%lf", &base);
+            scanf("%lf", &a);
 
             printf("Digite a altura: ");
-            scanf("%lf", &altura);
+            scanf("%lf", &b);
 
-            if (base >= 0 && altura >= 0) {
-                c = base * altura;
+            if (a >= 0 && b >= 0) {
+
+                c = areaRetangulo(a, b);
+
                 printf("Area do retangulo: %.2lf\n", c);
+
             } else {
+
                 printf("Erro: valores invalidos.\n");
             }
 
-        } else if (strcmp(figura, "triangulo") == 0) {
 
-            printf("Digite a base: ");
-            scanf("%lf", &base);
+        // HIPOTENUSA
+        } else if (strcmp(operacao, "hipotenusa") == 0) {
 
-            printf("Digite a altura: ");
-            scanf("%lf", &altura);
+            printf("Digite o primeiro cateto: ");
+            scanf("%lf", &a);
 
-            if (base >= 0 && altura >= 0) {
-                c = (base * altura) / 2;
-                printf("Area do triangulo: %.2lf\n", c);
+            printf("Digite o segundo cateto: ");
+            scanf("%lf", &b);
+
+            if (a >= 0 && b >= 0) {
+
+                c = hipotenusa(a, b);
+
+                printf("Hipotenusa: %.2lf\n", c);
+
             } else {
+
                 printf("Erro: valores invalidos.\n");
             }
 
+
+        // SAIR
+        } else if (strcmp(operacao, "sair") == 0) {
+
+            printf("Calculadora encerrada.\n");
+
+
+        // OPERACAO INVALIDA
         } else {
-            printf("Figura invalida.\n");
+
+            printf("Operacao invalida.\n");
         }
 
-    } else {
-        printf("Operacao invalida.\n");
-    }
+    } while (strcmp(operacao, "sair") != 0);
 
     return 0;
 }
