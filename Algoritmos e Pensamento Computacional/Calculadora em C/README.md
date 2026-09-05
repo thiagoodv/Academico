@@ -1,6 +1,6 @@
 <h1># 🧮 Calculadora em C</h1>
-([Clique aqui para abrir a Calculadora em C](calculadora.c)
 
+[👉 Clique aqui para abrir a Calculadora em C](./calculadora.c/)
 
 ## 📋 Descrição do projeto
 
