@@ -1,8 +1,6 @@
-
-
 # 🌡️ Conversor de Temperaturas em C
 
-[👉 Clique aqui para acessar o Conversor de Temperaturas]
+[👉 Clique aqui para acessar o Conversor de Temperaturas](conversor_temperaturas.c)
 
 ## 📌 Descrição da atividade
 
@@ -260,6 +258,7 @@ No Linux:
 ## 👨‍🎓 Identificação do estudante
 
 **Aluno:** Thiago Oliveira
+
 **Disciplina:** Algoritmos e Pensamento Computacional
 
 ```
