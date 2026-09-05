@@ -23,7 +23,7 @@ Atividades desenvolvidas durante a disciplina:
 - 🔢 [Calculadora no Flowgorithm](./Algoritmos%20e%20Pensamento%20Computacional/Calculadora%20no%20Flowgorithm/)
 - 🌡️ [Conversão de Temperatura em C](./Algoritmos%20e%20Pensamento%20Computacional/Conversão%20de%20Temperatura%20em%20C/)
 
-  ### Desenvolvimento Front-End Para Web
+### Desenvolvimento Front-End Para Web
 
   Ainda sem atividades publicadas.
 ---
