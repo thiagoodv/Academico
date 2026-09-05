@@ -8,7 +8,7 @@ Atualmente, o repositório reúne atividades desenvolvidas em **linguagem C** na
 
 ## 💻 Linguagem utilizada
 
-- C
+- C 
 - HTML - em breve
 - CSS - em breve
 
