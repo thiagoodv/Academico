@@ -18,7 +18,7 @@ Atualmente, o repositório reúne atividades desenvolvidas em **linguagem C** na
 
 Atividades desenvolvidas durante a disciplina:
 
-- 🧮 [Calculadora em C](./https://github.com/thiagoodv/Academico/blob/main/Algoritmos%20e%20Pensamento%20Computacional/Calculadora%20em%20C/README.md)
+- 🧮 [Calculadora em C]https://github.com/thiagoodv/Academico/blob/main/Algoritmos%20e%20Pensamento%20Computacional/Calculadora%20em%20C/README.md
 - 🔢 [Calculadora no Flowgorithm](./calculadora.20operaçoes.fprg/)
 - 🌡️ [Conversão de Temperatura em C](./conversor_temperaturas.c/.)
 
