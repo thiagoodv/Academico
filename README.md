@@ -18,9 +18,9 @@ Atualmente, o repositório reúne atividades desenvolvidas em **linguagem C** na
 
 Atividades desenvolvidas durante a disciplina:
 
-- 🧮 [Calculadora em C](
-- 🔢 [Calculadora no Flowgorithm](
-- 🌡️ [Conversão de Temperatura em C](
+- 🧮 [Calculadora em C](./calculadora.c/)
+- 🔢 [Calculadora no Flowgorithm](./calculadora.20operaçoes.fprg/)
+- 🌡️ [Conversão de Temperatura em C](./conversor_temperaturas.c/.)
 
 ---
 
