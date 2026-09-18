@@ -79,4 +79,4 @@ Primeiro, o usuário digita os 20 números. Depois, os valores são armazenados 
 
 ## 💡 Conclusão
 
-A atividade mostrou como um vetor pode ser usado para armazenar vários valores e depois facilitar o processamento desses dados. O programa percorre o vetor algumas vezes para realizar diferentes tarefas, usando `for`, `if` e operadores como `%` para fazer as verificações necessárias.
+A atividade mostrou como um vetor pode ser usado para armazenar vários valores e depois facilitar o processamento desses dados. O programa percorre o vetor algumas vezes para realizar diferentes tarefas, usando `for`, `if` e o operador `%` para fazer as verificações necessárias.
