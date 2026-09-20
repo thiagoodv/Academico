@@ -113,13 +113,18 @@ Também foi utilizado `while` na função `limparBuffer()` para remover os carac
 
 ---
 
-# 5. Execução
+# 5. Como executar no Windows
 
-O programa foi desenvolvido e testado em linguagem C utilizando o OnlineGDB.
+Para executar o programa, é necessário ter um compilador de C instalado.
 
-Para executar o programa, basta selecionar a linguagem C, inserir o código do arquivo `monitoramento.c` e clicar em **Run**.
+Abra o **Prompt de Comando (CMD)** ou o terminal na pasta onde está o arquivo `monitoramento.c`.
 
-Durante a execução, o programa solicita o limite de temperatura e, em seguida, as temperaturas que serão monitoradas.
+### Compilação
+
+```text
+gcc monitoramento.c -o monitoramento
+Execução
+monitoramento.exe
 
 ---
 
